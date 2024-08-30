@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:armor_stand,tag=villager_caravan.llama_tracker] run function villager_caravan:tick_llama_tracker

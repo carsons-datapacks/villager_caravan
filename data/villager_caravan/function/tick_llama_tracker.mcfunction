@@ -1,0 +1,5 @@
+execute at @e[type=#villager_caravan:llama] if score @n[type=#villager_caravan:llama] villager_caravan.uuid_0 = @s villager_caravan.uuid_0 if score @n[type=#villager_caravan:llama] villager_caravan.uuid_1 = @s villager_caravan.uuid_1 if score @n[type=#villager_caravan:llama] villager_caravan.uuid_2 = @s villager_caravan.uuid_2 if score @n[type=#villager_caravan:llama] villager_caravan.uuid_3 = @s villager_caravan.uuid_3 at @n[type=#villager_caravan:llama] rotated as @n[type=#villager_caravan:llama] run tp @s ~ ~-0.8 ~ ~ ~
+execute as @a on vehicle if entity @s[type=#villager_caravan:llama] at @s positioned ~ ~-0.8 ~ run team leave @s
+execute as @a on vehicle if entity @s[type=#villager_caravan:llama] at @s positioned ~ ~-0.8 ~ run kill @e[type=minecraft:armor_stand,tag=villager_caravan.llama_tracker,distance=..0.01]
+execute at @s unless entity @n[type=#villager_caravan:llama,distance=..1] run team leave @s
+execute at @s unless entity @n[type=#villager_caravan:llama,distance=..1] run kill @s
